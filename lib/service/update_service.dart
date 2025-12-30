@@ -62,13 +62,12 @@ class UpdateService {
         }
       }
 
-      // If we reach here, in-app flows didn't run or failed -> fallback to Play Store
-      debugPrint('UpdateService: falling back to Play Store URL.');
-      await _openPlayStore();
+      // If we reach here, in-app flows didn't run or failed
+      // Don't force open Play Store - let user continue using app
+      debugPrint('UpdateService: in-app update flows not available.');
     } catch (e, st) {
       debugPrint('UpdateService: checkForUpdate failed: $e\n$st');
-      // Fallback if entire in-app check failed
-      await _openPlayStore();
+      // Don't force open Play Store on errors - let user continue using app
     }
   }
 
