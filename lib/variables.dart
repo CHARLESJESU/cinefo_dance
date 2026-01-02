@@ -60,6 +60,7 @@ Map<String, int> finalDoubingMap = {};
 int dancerunitid=5;
 Map? baseurlresultbody;
 Map? loginresponsebody;
+Map? globalloginData;
 String? ProfileImage;
 String? Platformlogo;
 String? vpid;
